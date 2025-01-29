@@ -27,6 +27,7 @@ dependencies {
 	compileOnly("org.mapstruct:mapstruct:1.6.0")
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.6.0")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-security")
 }
 
 tasks.withType<Test> {
