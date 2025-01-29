@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.CustomerFilter;
 import com.example.demo.model.Customer;
+import com.example.demo.repository.CustomerRepository;
 import com.example.demo.service.CustomerService;
 import com.fasterxml.jackson.databind.JsonNode;
 import jakarta.validation.Valid;
@@ -20,8 +21,12 @@ public class CustomerResource {
 
     private final CustomerService customerService;
 
-    public CustomerResource(CustomerService customerService) {
+    private final CustomerRepository customerRepository;
+
+    public CustomerResource(CustomerService customerService,
+                            CustomerRepository customerRepository) {
         this.customerService = customerService;
+        this.customerRepository = customerRepository;
     }
 
     @GetMapping
@@ -63,5 +68,11 @@ public class CustomerResource {
     @DeleteMapping
     public void deleteMany(@RequestParam List<UUID> ids) {
         customerService.deleteMany(ids);
+    }
+
+    @GetMapping("/allCustomers")
+    public PagedModel<Customer> getAll1(Pageable pageable) {
+        Page<Customer> customers = customerRepository.findAll(pageable);
+        return new PagedModel<>(customers);
     }
 }
