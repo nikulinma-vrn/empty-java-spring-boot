@@ -26,6 +26,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	compileOnly("org.mapstruct:mapstruct:1.6.0")
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.6.0")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 }
 
 tasks.withType<Test> {
