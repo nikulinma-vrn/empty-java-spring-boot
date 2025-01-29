@@ -21,6 +21,11 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation("org.liquibase:liquibase-core")
+    runtimeOnly("com.h2database:h2")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
+	compileOnly("org.mapstruct:mapstruct:1.6.0")
+	annotationProcessor("org.mapstruct:mapstruct-processor:1.6.0")
 }
 
 tasks.withType<Test> {
