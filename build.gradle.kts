@@ -28,6 +28,7 @@ dependencies {
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.6.0")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.kafka:spring-kafka")
 }
 
 tasks.withType<Test> {
