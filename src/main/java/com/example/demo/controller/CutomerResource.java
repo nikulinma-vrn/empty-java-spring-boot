@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.CutomerFilter;
+import com.example.demo.service.CutomerService;
 import com.example.demo.entity.Cutomer;
 import com.fasterxml.jackson.databind.JsonNode;
 import jakarta.validation.Valid;

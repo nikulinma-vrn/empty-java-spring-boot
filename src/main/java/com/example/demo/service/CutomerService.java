@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.CutomerFilter;
 import com.example.demo.entity.Cutomer;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.data.domain.Page;
