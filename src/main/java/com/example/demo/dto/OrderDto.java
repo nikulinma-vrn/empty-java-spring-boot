@@ -16,14 +16,14 @@ public class OrderDto {
     private final BigDecimal amount;
     @PastOrPresent
     private final LocalDate orderDate;
-    private final CutomerDto cutomer;
+    private final CustomerDto customer;
 
-    public OrderDto(Long id, String number, BigDecimal amount, LocalDate orderDate, CutomerDto cutomer) {
+    public OrderDto(Long id, String number, BigDecimal amount, LocalDate orderDate, CustomerDto customer) {
         this.id = id;
         this.number = number;
         this.amount = amount;
         this.orderDate = orderDate;
-        this.cutomer = cutomer;
+        this.customer = customer;
     }
 
     public Long getId() {
@@ -42,8 +42,8 @@ public class OrderDto {
         return orderDate;
     }
 
-    public CutomerDto getCutomer() {
-        return cutomer;
+    public CustomerDto getCustomer() {
+        return customer;
     }
 
     @Override
@@ -55,12 +55,12 @@ public class OrderDto {
                 Objects.equals(this.number, entity.number) &&
                 Objects.equals(this.amount, entity.amount) &&
                 Objects.equals(this.orderDate, entity.orderDate) &&
-                Objects.equals(this.cutomer, entity.cutomer);
+                Objects.equals(this.customer, entity.customer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, number, amount, orderDate, cutomer);
+        return Objects.hash(id, number, amount, orderDate, customer);
     }
 
     @Override
@@ -70,6 +70,6 @@ public class OrderDto {
                 "number = " + number + ", " +
                 "amount = " + amount + ", " +
                 "orderDate = " + orderDate + ", " +
-                "cutomer = " + cutomer + ")";
+                "customer = " + customer + ")";
     }
 }

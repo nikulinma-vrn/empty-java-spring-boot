@@ -9,9 +9,9 @@
         <createSequence incrementBy="50" sequenceName="order__seq" startValue="1"/>
     </changeSet>
     <changeSet id="1744918590298-2" author="maslov (generated)">
-        <createTable tableName="cutomer">
+        <createTable tableName="customer">
             <column name="id" type="UUID">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_cutomer"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_customer"/>
             </column>
             <column name="name" type="VARCHAR(255)"/>
             <column name="email" type="VARCHAR(255)"/>
@@ -26,13 +26,13 @@
             <column name="number" type="VARCHAR(255)"/>
             <column name="amount" type="DECIMAL"/>
             <column name="order_date" type="DATE"/>
-            <column name="cutomer_id" type="UUID"/>
+            <column name="customer_id" type="UUID"/>
         </createTable>
     </changeSet>
     <changeSet id="1744918590298-4" author="maslov (generated)">
-        <addForeignKeyConstraint baseColumnNames="cutomer_id" baseTableName="order_"
-                                 constraintName="FK_ORDER__ON_CUTOMER" referencedColumnNames="id"
-                                 referencedTableName="cutomer"/>
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="order_"
+                                 constraintName="FK_ORDER__ON_CUSTOMER" referencedColumnNames="id"
+                                 referencedTableName="customer"/>
     </changeSet>
 
 </databaseChangeLog>

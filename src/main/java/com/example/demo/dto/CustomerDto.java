@@ -1,22 +1,22 @@
 package com.example.demo.dto;
 
-import com.example.demo.entity.Cutomer;
+import com.example.demo.entity.Customer;
 import jakarta.validation.constraints.PositiveOrZero;
 
 import java.util.Objects;
 import java.util.UUID;
 
 /**
- * DTO for {@link Cutomer}
+ * DTO for {@link Customer}
  */
-public class CutomerDto {
+public class CustomerDto {
     private final UUID id;
     private final String name;
     private final String email;
     @PositiveOrZero
     private final Integer number;
 
-    public CutomerDto(UUID id, String name, String email, Integer number) {
+    public CustomerDto(UUID id, String name, String email, Integer number) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -43,7 +43,7 @@ public class CutomerDto {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CutomerDto entity = (CutomerDto) o;
+        CustomerDto entity = (CustomerDto) o;
         return Objects.equals(this.id, entity.id) &&
                 Objects.equals(this.name, entity.name) &&
                 Objects.equals(this.email, entity.email) &&

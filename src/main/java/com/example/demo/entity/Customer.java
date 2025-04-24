@@ -6,8 +6,8 @@ import jakarta.validation.constraints.PositiveOrZero;
 import java.util.UUID;
 
 @Entity
-@Table(name = "cutomer")
-public class Cutomer {
+@Table(name = "customer")
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)

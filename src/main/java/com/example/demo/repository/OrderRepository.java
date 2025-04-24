@@ -8,5 +8,5 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, Long> {
     List<Order> findByNumber(String number);
 
-    long countByCutomer_Name(String name);
+    long countByCustomer_Name(String name);
 }

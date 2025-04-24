@@ -25,15 +25,15 @@ public class Order {
     private LocalDate orderDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cutomer_id")
-    private Cutomer cutomer;
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
-    public Cutomer getCutomer() {
-        return cutomer;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCutomer(Cutomer cutomer) {
-        this.cutomer = cutomer;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public LocalDate getOrderDate() {
